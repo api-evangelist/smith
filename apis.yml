@@ -1,7 +1,23 @@
 aid: smith
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/smith.png
 name: Smith
-description: Smith is a company surfaced as a portfolio company of 500-global and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: Smith (GoSmith, Inc.) was an app- and web-based marketplace for home-improvement and remodeling
+  services, founded in 2012 in Sunnyvale, California and part of the 500 Startups (500 Global) accelerator's
+  8th batch in 2014. Homeowners listed a project to receive quotes from up to five researched and vetted
+  local contractors, with scheduling and payment tooling for the professionals. As of this enrichment pass
+  the gosmith.com domain still resolves (AWS/Google Workspace DNS) but serves no website (HTTP/HTTPS connections
+  time out), and the company exposes no public developer API, documentation, or SDKs.
 url: https://raw.githubusercontent.com/api-evangelist/smith/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,9 +27,15 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Home Improvement
+- Home Services
+- Marketplace
+- Contractors
+- Consumer
+- Mobile App
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +43,12 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/smith-domain-security.yml
 - type: Website
   url: https://gosmith.com
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
